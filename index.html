@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Tugas Saya</title>
+    <style>
+        /* PENGATURAN TAMPILAN UTAMA */
+        body {
+            background-color: #ffb3c6; /* Warna Request Anda */
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: #ffffff;
+            width: 100%;
+            max-width: 900px;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        /* BAGIAN PROFIL */
+        .profile-section {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            border-bottom: 3px solid #ffe0e9;
+            padding-bottom: 20px;
+        }
+
+        .profile-pic {
+            width: 110px;
+            height: 110px;
+            background-color: #ddd;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #ff8fab;
+        }
+
+        .profile-info h1 { margin: 0; color: #333; font-size: 26px; }
+        .profile-info p { margin: 5px 0; color: #555; font-weight: 500; }
+
+        /* BAGIAN PILIHAN (DROPDOWN) */
+        .control-section {
+            text-align: center;
+            background-color: #fff0f5;
+            padding: 20px;
+            border-radius: 12px;
+        }
+
+        select {
+            padding: 12px;
+            border-radius: 8px;
+            border: 2px solid #ff8fab;
+            font-size: 16px;
+            width: 70%;
+            cursor: pointer;
+            outline: none;
+        }
+
+        /* AREA TAMPILAN TUGAS */
+        .display-area {
+            flex-grow: 1;
+            border: 2px dashed #ff8fab;
+            border-radius: 12px;
+            height: 600px; /* Tinggi area tugas */
+            overflow: hidden;
+            background: #fafafa;
+        }
+
+        iframe { width: 100%; height: 100%; border: none; }
+        
+        /* Responsive HP */
+        @media (max-width: 600px) {
+            .profile-section { flex-direction: column; text-align: center; }
+            select { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="profile-section">
+            <img src="talitha.jpg" alt="Foto Saya" class="profile-pic">
+            <div class="profile-info">
+                <h1>Talitha Candraningtyas</h1>
+                <p>05TPLM007</p>
+                <p>NIM: 231011403515</p>
+            </div>
+        </div>
+
+        <div class="control-section">
+            <h3 style="margin-top:0; color:#d63384;">Lihat Arsip Tugas</h3>
+            <select id="tugasSelect" onchange="bukaPertemuan()">
+                <option value="">-- Pilih Pertemuan --</option>
+                <script>
+                    for (let i = 2; i <= 14; i++) {
+                        // Ini akan mencari file bernama menu_p1.html, menu_p2.html, dst.
+                        document.write(`<option value="menu_p${i}.html">Pertemuan ${i}</option>`);
+                    }
+                </script>
+            </select>
+        </div>
+
+        <div class="display-area">
+            <iframe id="frameUtama" name="frameUtama"></iframe>
+        </div>
+    </div>
+
+    <script>
+        function bukaPertemuan() {
+            var link = document.getElementById("tugasSelect").value;
+            if(link) {
+                document.getElementById("frameUtama").src = link;
+            }
+        }
+    </script>
+</body>
+</html>

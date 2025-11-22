@@ -1,0 +1,92 @@
+<html>
+<head>
+    <title>Latihan Pembuatan Form</title>
+</head>
+<body>
+
+    <h3>Form Pendaftaran</h3>
+    <hr>
+
+    <form>
+        <table border="0" cellspacing="10">
+            
+            <tr>
+                <td>NIM</td>
+                <td>:</td>
+                <td><input type="text" size="15" name="nim"></td>
+            </tr>
+
+            <tr>
+                <td>NAMA</td>
+                <td>:</td>
+                <td><input type="text" size="30" name="nama"></td>
+            </tr>
+
+            <tr>
+                <td>JENIS KELAMIN</td>
+                <td>:</td>
+                <td>
+                    <input type="radio" name="jkel" value="Pria"> Pria
+                    <input type="radio" name="jkel" value="Wanita"> Wanita
+                </td>
+            </tr>
+
+            <tr>
+                <td>AGAMA</td>
+                <td>:</td>
+                <td>
+                    <select name="agama">
+                        <option value="-">-- Pilih Agama --</option>
+                        <option value="Islam">Islam</option>
+                        <option value="Katolik">Katolik</option>
+                        <option value="Kristen">Kristen</option>
+                        <option value="Hindu">Hindu</option>
+                        <option value="Budha">Budha</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>STATUS</td>
+                <td>:</td>
+                <td>
+                    <input type="radio" name="status" value="kawin"> Kawin
+                    <input type="radio" name="status" value="belumkawin"> Belum Kawin
+                </td>
+            </tr>
+
+            <tr>
+                <td>JURUSAN</td>
+                <td>:</td>
+                <td>
+                    <select name="jurusan">
+                        <option value="TI">Teknik Informatika</option>
+                        <option value="SI">Sistem Informasi</option>
+                        <option value="MI">Manajemen Informatika</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td valign="top">KOMENTAR</td>
+                <td valign="top">:</td>
+                <td>
+                    <textarea name="komentar" rows="4" cols="30"></textarea>
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td>
+                    <br>
+                    <input type="submit" value="Simpan">
+                    <input type="reset" value="Batal">
+                </td>
+            </tr>
+
+        </table>
+    </form>
+
+</body>
+</html>

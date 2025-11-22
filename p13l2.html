@@ -1,0 +1,68 @@
+<html>
+<head>
+<title>penggunaan div tag</title>
+<style type="text/css">
+    /* Saya mengganti semua tanda kutip ” menjadi " (lurus) */
+    
+    div.header {
+        border: 1px solid #000000;
+        margin: 2px;
+        background: #ffffff;
+        /* Height saya ganti auto agar tinggi menyesuaikan besarnya tulisan */
+        height: auto; 
+        padding: 10px;
+        font-size: 2em; 
+        text-align: center;
+    }
+
+    div.sidebar {
+        border: 1px solid #000000; /* Hitam sesuai gambar */
+        margin: 2px;
+        background: #ffffff;
+        float: left;
+        width: 38%;
+        height: 150px; /* Sedikit dipertinggi agar proporsional */
+        font-size: 2em;
+        text-align: center;
+        /* Flexbox agar teks ada di tengah vertikal */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    div.content {
+        border: 1px solid #000000; /* Hitam sesuai gambar */
+        margin: 2px;
+        background: #ffffff;
+        float: right;
+        width: 60%; 
+        height: 150px; /* Samakan tinggi dengan sidebar */
+        font-size: 2em;
+        text-align: center;
+         /* Flexbox agar teks ada di tengah vertikal */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    div.footer {
+        border: 1px solid #000000;
+        margin: 2px;
+        background: #ffffff;
+        clear: both;
+        height: auto;
+        padding: 10px;
+        font-size: 2em;
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+
+    <div class="header">Judul</div>
+    <div class="sidebar">Sisi Kiri</div>
+    <div class="content">Isi Konten</div>
+    <div class="footer">Bawah</div>
+
+</body>
+</html>

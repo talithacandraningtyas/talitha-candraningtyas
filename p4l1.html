@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"> 
+<HTML> 
+<HEAD> 
+<TITLE> New Document </TITLE> 
+<META NAME="Generator" CONTENT="EditPlus"> 
+<META NAME="Author" CONTENT=""> 
+<META NAME="Keywords" CONTENT=""> 
+<META NAME="Description" CONTENT=""> 
+<STYLE>
+/* CSS untuk mengatur gambar */
+.center-container {
+    /* Menggunakan flexbox untuk memusatkan konten */
+    display: flex;
+    justify-content: center; /* Memusatkan secara horizontal */
+    align-items: center; /* Opsional: Memusatkan secara vertikal jika container memiliki tinggi tertentu */
+    /* Tambahkan margin atas/bawah jika perlu */
+    margin-top: 20px; 
+}
+.clickable-image {
+    /* Memberi gambar ukuran yang lebih besar */
+    width: 290px; /* Dua kali lipat dari 145 */
+    height: 400px; /* Dua kali lipat dari 126 */
+}
+</STYLE>
+</HEAD> 
+<BODY> 
+
+<p style="text-align: center;"> Klik pada bagian atau area gambar sesuai dengan koordinat map yang telah ditentukan</p>
+
+<div class="center-container">
+    <img src="talitha.jpg" class="clickable-image" alt="gambarku"
+    usemap="#picturemap"> 
+</div>
+
+<map name="picturemap"> 
+ <area shape="rect" coords="0,0,164,252" href="a.htm" title="bagianA"> <area shape="circle" coords="180,116,6" href="b.htm" alt="bagianB"> <area shape="circle" coords="248,116,16" href="c.htm" alt="bagianC"> </map> 
+
+</BODY> 
+</HTML>
