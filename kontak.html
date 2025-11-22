@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hubungi Saya</title>
+    <style>
+        /* --- 1. STYLE DASAR (KONSISTEN) --- */
+        body {
+            background-color: #ffb3c6; /* Pink lembut */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        /* --- 2. NAVIGASI MENU --- */
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #d63384;
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #ffb3c6;
+            color: #d63384;
+        }
+
+        /* --- 3. CONTAINER UTAMA --- */
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #d63384;
+            margin-bottom: 10px;
+        }
+
+        p.subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 40px;
+        }
+
+        /* --- 4. GRID LAYOUT (Kiri: Info, Kanan: Form) --- */
+        .contact-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        /* Bagian Info Kontak */
+        .contact-info {
+            flex: 1;
+            min-width: 250px;
+            background-color: #fff0f5;
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid #ffe0e9;
+        }
+
+        .info-item {
+            margin-bottom: 20px;
+        }
+
+        .info-item h3 {
+            margin: 0 0 5px 0;
+            color: #d63384;
+            font-size: 18px;
+        }
+
+        /* Bagian Form Input */
+        .contact-form {
+            flex: 1.5;
+            min-width: 300px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box; /* Agar padding tidak merusak lebar */
+            font-family: inherit;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #d63384;
+            background-color: #fffafa;
+        }
+
+        /* Tombol Kirim */
+        .btn-kirim {
+            background-color: #d63384;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            width: 100%;
+            transition: 0.3s;
+        }
+
+        .btn-kirim:hover {
+            background-color: #b02a67;
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="tugas.html">Tugas</a>
+        <a href="profil.html">Profil</a>
+        <a href="about.html">About</a>
+        <a href="galery.html">Galery</a>
+        <a href="kontak.html">Kontak</a>
+    </nav>
+
+    <div class="container">
+        <h1>Hubungi Saya</h1>
+        <p class="subtitle">Punya pertanyaan atau ingin berdiskusi? Kirim pesan di bawah ini.</p>
+
+        <div class="contact-wrapper">
+            
+            <div class="contact-info">
+                <div class="info-item">
+                    <h3>📍 Alamat</h3>
+                    <p>balaraja, Indonesia</p>
+                </div>
+                <div class="info-item">
+                    <h3>📧 Email</h3>
+                    <p>talithacandraningtyas0321@gmail.com</p>
+                </div>
+                <div class="info-item">
+                    <h3>📱 WhatsApp</h3>
+                    <p>+62 857-1893-6384</p>
+                </div>
+                <div class="info-item">
+                    <h3>📷 Instagram</h3>
+                    <p>@usernam</p>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <form>
+                    <label for="nama">Nama Lengkap</label>
+                    <input type="text" id="nama" placeholder="Masukkan nama Anda..." required>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="contoh@email.com" required>
+
+                    <label for="pesan">Pesan</label>
+                    <textarea id="pesan" rows="5" placeholder="Tulis pesan Anda di sini..." required></textarea>
+
+                    <button type="button" class="btn-kirim" onclick="alert('Pesan berhasil dikirim! (Simulasi)')">Kirim Pesan</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

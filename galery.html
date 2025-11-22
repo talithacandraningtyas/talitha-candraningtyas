@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri Foto</title>
+    <style>
+        /* --- 1. STYLE DASAR (SAMA SEPERTI HALAMAN LAIN) --- */
+        body {
+            background-color: #ffb3c6; /* Warna Pink Request Anda */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        /* --- 2. NAVIGASI MENU --- */
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #d63384;
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            position: sticky; /* Agar menu tetap di atas saat scroll */
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #ffb3c6;
+            color: #d63384;
+        }
+
+        /* --- 3. CONTAINER UTAMA --- */
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        h1 { color: #d63384; margin-bottom: 30px; }
+
+        /* --- 4. GALERI GRID (TATA LETAK FOTO) --- */
+        .gallery-grid {
+            display: grid;
+            /* Membuat kolom otomatis (Responsif: menyesuaikan layar HP/Laptop) */
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px; /* Jarak antar foto */
+            padding: 10px;
+        }
+
+        /* --- 5. KARTU FOTO --- */
+        .photo-card {
+            background-color: #fff0f5;
+            border-radius: 10px;
+            overflow: hidden; /* Agar foto tidak keluar dari kotak */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease; /* Animasi halus */
+            border: 2px solid #ffe0e9;
+        }
+
+        /* Efek saat mouse di atas foto (Zoom sedikit) */
+        .photo-card:hover {
+            transform: scale(1.05); /* Membesar 5% */
+            border-color: #d63384;
+        }
+
+        .photo-card img {
+            width: 100%;
+            height: 200px; /* Tinggi seragam agar rapi */
+            object-fit: cover; /* Memotong foto otomatis agar pas di kotak */
+            display: block;
+        }
+
+        .caption {
+            padding: 10px;
+            font-size: 14px;
+            color: #d63384;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="tugas.html">Tugas</a>
+        <a href="profil.html">Profil</a>
+        <a href="about.html">About</a>
+        <a href="galery.html">Galery</a>
+        <a href="kontak.html">Kontak</a>
+    </nav>
+
+    <div class="container">
+        <h1>Galeri Kegiatan</h1>
+        <p>Kumpulan dokumentasi kegiatan perkuliahan dan proyek saya.</p>
+
+        <div class="gallery-grid">
+            
+            <div class="photo-card">
+                <img src="talitha.jpg" alt="Foto Kegiatan 1">
+                <div class="caption">Kegiatan Kampus</div>
+            </div>
+
+            <div class="photo-card">
+                <img src="foto2.jpg" alt="Belum ada foto" onerror="this.src='https://via.placeholder.com/300/ff8fab/ffffff?text=Foto+2'">
+                <div class="caption">Belajar Coding</div>
+            </div>
+
+            <div class="photo-card">
+                <img src="foto3.jpg" alt="Belum ada foto" onerror="this.src='https://via.placeholder.com/300/ff8fab/ffffff?text=Foto+3'">
+                <div class="caption">Proyek Web</div>
+            </div>
+
+            <div class="photo-card">
+                <img src="talitha.jpg" alt="Belum ada foto" onerror="this.src='https://via.placeholder.com/300/ff8fab/ffffff?text=Foto+4'">
+                <div class="caption">Liburan</div>
+            </div>
+
+            <div class="photo-card">
+                <img src="teman.jpg" alt="Belum ada foto" onerror="this.src='https://via.placeholder.com/300/ff8fab/ffffff?text=Foto+5'">
+                <div class="caption">Bersama Teman</div>
+            </div>
+
+            <div class="photo-card">
+                <img src="foto6.jpg" alt="Belum ada foto" onerror="this.src='https://via.placeholder.com/300/ff8fab/ffffff?text=Foto+6'">
+                <div class="caption">Presentasi Tugas</div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

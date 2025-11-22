@@ -3,126 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio Tugas Saya</title>
+    <title>Homepage Portofolio Saya</title>
     <style>
-        /* PENGATURAN TAMPILAN UTAMA */
+        /* Pengaturan Tampilan Dasar */
         body {
-            background-color: #ffb3c6; /* Warna Request Anda */
-            font-family: 'Segoe UI', sans-serif;
+            background-color: #ffb3c6; /* Latar belakang pink lembut */
+            font-family: Arial, sans-serif;
             margin: 0;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-            min-height: 100vh;
+            padding: 0;
+            color: #333;
         }
 
-        .container {
-            background-color: #ffffff;
-            width: 100%;
-            max-width: 900px;
-            padding: 30px;
-            border-radius: 20px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        /* BAGIAN PROFIL */
-        .profile-section {
-            display: flex;
-            align-items: center;
-            gap: 25px;
-            border-bottom: 3px solid #ffe0e9;
-            padding-bottom: 20px;
-        }
-
-        .profile-pic {
-            width: 110px;
-            height: 110px;
-            background-color: #ddd;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid #ff8fab;
-        }
-
-        .profile-info h1 { margin: 0; color: #333; font-size: 26px; }
-        .profile-info p { margin: 5px 0; color: #555; font-weight: 500; }
-
-        /* BAGIAN PILIHAN (DROPDOWN) */
-        .control-section {
-            text-align: center;
+        /* Styling Header/Judul */
+        .header {
             background-color: #fff0f5;
-            padding: 20px;
-            border-radius: 12px;
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
         }
 
-        select {
-            padding: 12px;
-            border-radius: 8px;
-            border: 2px solid #ff8fab;
-            font-size: 16px;
-            width: 70%;
-            cursor: pointer;
-            outline: none;
+        .header h1 {
+            color: #d63384;
+            margin: 0;
+            font-size: 2.5em;
         }
 
-        /* AREA TAMPILAN TUGAS */
-        .display-area {
-            flex-grow: 1;
-            border: 2px dashed #ff8fab;
-            border-radius: 12px;
-            height: 600px; /* Tinggi area tugas */
-            overflow: hidden;
-            background: #fafafa;
+        /* Styling Navigasi */
+        nav {
+            display: flex; /* Membuat link sejajar horizontal */
+            justify-content: center; /* Menengahkan semua link */
+            background-color: #d63384;
+            padding: 10px 0;
+            margin-bottom: 30px;
         }
 
-        iframe { width: 100%; height: 100%; border: none; }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            background-color: #ffb3c6;
+            color: #d63384;
+        }
+
+        /* Styling Konten Utama */
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
         
-        /* Responsive HP */
-        @media (max-width: 600px) {
-            .profile-section { flex-direction: column; text-align: center; }
-            select { width: 100%; }
+        /* Styling Footer */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+            color: #666;
+            font-size: 0.9em;
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <div class="profile-section">
-            <img src="talitha.jpg" alt="Foto Saya" class="profile-pic">
-            <div class="profile-info">
-                <h1>Talitha Candraningtyas</h1>
-                <p>05TPLM007</p>
-                <p>NIM: 231011403515</p>
-            </div>
-        </div>
-
-        <div class="control-section">
-            <h3 style="margin-top:0; color:#d63384;">Lihat Arsip Tugas</h3>
-            <select id="tugasSelect" onchange="bukaPertemuan()">
-                <option value="">-- Pilih Pertemuan --</option>
-                <script>
-                    for (let i = 2; i <= 14; i++) {
-                        // Ini akan mencari file bernama menu_p1.html, menu_p2.html, dst.
-                        document.write(`<option value="menu_p${i}.html">Pertemuan ${i}</option>`);
-                    }
-                </script>
-            </select>
-        </div>
-
-        <div class="display-area">
-            <iframe id="frameUtama" name="frameUtama"></iframe>
-        </div>
+    <div class="header">
+        <h1>Selamat Datang di Portofolio Saya!</h1>
+        <p>Arsip Tugas & Profil Diri Mahasiswa.</p>
     </div>
 
-    <script>
-        function bukaPertemuan() {
-            var link = document.getElementById("tugasSelect").value;
-            if(link) {
-                document.getElementById("frameUtama").src = link;
-            }
-        }
-    </script>
+    <nav>
+        <a href="tugas.html">Tugas</a>
+        <a href="profil.html">Profil</a>
+        <a href="about.html">About</a>
+        <a href="galery.html">Galeri</a>
+        <a href="kontak.html">Kontak</a>
+    </nav>
+
+    <div class="content">
+        <h2>Perjalanan Belajar HTML</h2>
+        <p>
+            Halaman ini adalah hub utama untuk melihat semua proyek dan tugas HTML saya dari Pertemuan 1 hingga 21. 
+            Anda dapat menjelajahi perjalanan belajar saya, melihat hasil kodingan, dan mengenal lebih jauh tentang saya. 
+            Gunakan menu navigasi di atas untuk berpindah ke halaman yang Anda tuju.
+        </p>
+        <p style="margin-top: 30px;">
+            <b>"Belajar koding tidaklah sulit, yang penting adalah konsistensi!"</b>
+        </p>
+    </div>
+
+    <div class="footer">
+        &copy; 2025 Portofolio Talitha.
+    </div>
+
 </body>
 </html>

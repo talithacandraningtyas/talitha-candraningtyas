@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Saya</title>
+    <style>
+        /* 1. PENGATURAN DASAR (Sama dengan Home) */
+        body {
+            background-color: #ffb3c6; /* Warna Pink Request Anda */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        /* 2. NAVIGASI MENU (Agar bisa kembali ke Home) */
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #d63384; /* Pink tua */
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #ffb3c6;
+            color: #d63384;
+        }
+
+        /* 3. KOTAK KONTEN UTAMA */
+        .container {
+            max-width: 800px;
+            margin: 40px auto; /* Posisi tengah */
+            background-color: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        /* 4. GAYA FOTO PROFIL */
+        .foto-profil {
+            width: 200px;       /* Ukuran lebar tetap agar rapi */
+            height: 200px;      /* Tinggi sama agar jadi kotak/bulat */
+            object-fit: cover;  /* Agar foto tidak gepeng */
+            border-radius: 50%; /* Membuat foto jadi bulat */
+            border: 5px solid #ff8fab;
+            margin-bottom: 20px;
+        }
+
+        /* 5. TABEL BIODATA */
+        table {
+            margin: 20px auto; /* Tengah */
+            text-align: left;
+            border-collapse: collapse;
+            width: 80%;
+        }
+
+        td {
+            padding: 10px;
+            border-bottom: 1px solid #ffe0e9;
+        }
+
+        .label {
+            font-weight: bold;
+            color: #d63384;
+            width: 30%;
+        }
+
+        /* 6. TEKS PENGALAMAN */
+        .cerita-box {
+            background-color: #fff0f5;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: justify;
+            line-height: 1.6;
+            margin-top: 30px;
+            border-left: 5px solid #d63384;
+        }
+
+        h2 { color: #d63384; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="tugas.html">Tugas</a>
+        <a href="profil.html">Profil</a>
+        <a href="about.html">About</a>
+        <a href="galery.html">Galery</a>
+        <a href="kontak.html">Kontak</a>
+    </nav>
+
+    <div class="container">
+        
+        <img src="talitha.jpg" alt="Foto Profil Talitha" class="foto-profil">
+        
+        <h2>Profil Diri</h2>
+
+        <table>
+            <tr>
+                <td class="label">Nama Lengkap</td>
+                <td>: Talitha Candraningtyas</td>
+            </tr>
+            <tr>
+                <td class="label">NIM</td>
+                <td>: 231011402313</td>
+            </tr>
+            <tr>
+                <td class="label">Kelas</td>
+                <td>: 05TPLM007</td>
+            </tr>
+            <tr>
+                <td class="label">Jenis Kelamin</td>
+                <td>: Wanita</td>
+            </tr>
+            <tr>
+                <td class="label">Hobi</td>
+                <td>: Design web</td>
+            </tr>
+        </table>
+
+        <div class="cerita-box">
+            <h3 style="text-align: center; color: #d63384;">Pengalaman Belajar</h3>
+            <p>
+                <b>Pengalaman adalah ilmu yang paling berharga</b> yang dapat kita peroleh dimana saja, kapan saja dan tidak harus duduk dibangku sekolah resmi. 
+                Belajar dari pengalaman membuat seseorang menjadi lebih berhati-hati dalam segala tindakan atau dalam mengambil keputusan.
+            </p>
+            <p>
+                <i>Hari ini saya mempunyai pengalaman belajar membuat web. Belajar web tidaklah sulit yang penting harus berlatih terus.</i>
+            </p>
+            <p>
+                Website perdana yang saya buat tentang pengalaman pribadi saya ketika belajar membuat tampilan yang menarik, sangat mengasyikkan sekali.
+                <b><u>Saya senang sekali dapat membuat halaman website, apalagi dapat diupload secara online, semua orang akan membaca tulisan saya.</u></b>
+            </p>
+        </div>
+
+    </div>
+
+</body>
+</html>
